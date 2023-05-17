@@ -302,3 +302,103 @@ nothing to commit, working tree clean
 USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (dev)
 $
 ```
+
+## Bundle2
+### Exercise1
+
+```bash script
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop
+$ ls
+ Discord.lnk*  'Internet Download Manager.lnk'*  'PuTTY (64-bit).lnk'*  'Visual Studio Code.lnk'*   desktop.ini   exercise-1/
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop
+$ cd exercise-1/
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (dev)
+$ git branch
+* dev
+  main
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (dev)
+$ git branch ft/bundle-2
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (dev)
+$ git switch ft/bundle-2
+Switched to branch 'ft/bundle-2'
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/bundle-2)
+$ vi services.html
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/bundle-2)
+$ vi services.html
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/bundle-2)
+$ git add services.html
+warning: in the working copy of 'services.html', LF will be replaced by CRLF the next time Git touches it
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/bundle-2)
+$ git stash
+giSaved working directory and index state WIP on ft/bundle-2: 8b5468e home and about page files
+t
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/bundle-2)
+$ git stash
+No local changes to save
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/bundle-2)
+$ git stash pop
+On branch ft/bundle-2
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   services.html
+
+Dropped refs/stash@{0} (2c34bdc8261e4aa7f1410c8de3da060bca759213)
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/bundle-2)
+$ git add services.html
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   services.html
+
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/bundle-2)
+$ git commit -m "created services page"
+[ft/bundle-2 5eea384] created services page
+ 1 file changed, 12 insertions(+)
+ create mode 100644 services.html
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/bundle-2)
+$ git push
+fatal: The current branch ft/bundle-2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/bundle-2
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/bundle-2)
+$ git push --set-upstream origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 483 bytes | 483.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/BaRemy/git-exercises/pull/new/ft/bundle-2
+remote:
+To https://github.com/BaRemy/git-exercises.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/bundle-2)
+$
+```
