@@ -402,9 +402,8 @@ branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
 USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/bundle-2)
 $
 ```
-
-##Bundle2
-###Exercise2
+## Bundle2
+### Exercise2
 ```
 
 USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/bundle-2)
