@@ -402,3 +402,205 @@ branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
 USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/bundle-2)
 $
 ```
+
+##Bundle2
+###Exercise2
+```
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/bundle-2)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (main)
+$ git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 636 bytes | 8.00 KiB/s, done.
+From https://github.com/BaRemy/git-exercises
+   5b9410f..106393c  main       -> origin/main
+Updating 5b9410f..106393c
+Fast-forward
+ about.html    | 12 ++++++++++++
+ home.html     | 12 ++++++++++++
+ services.html | 12 ++++++++++++
+ 3 files changed, 36 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+ create mode 100644 services.html
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (main)
+$ git switch -c ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/service-redesign)
+$ ls
+About_Us.html  about.html  contact-us.html  home.html  index.html  services.html
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+nothing to commit, working tree clean
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/service-redesign)
+$ vi service.html
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/service-redesign)
+$ vi services.html
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/service-redesign)
+$ git add .
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   services.html
+
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/service-redesign)
+$ git commit -m "feat: added service list"
+[ft/service-redesign 6b90744] feat: added service list
+ 1 file changed, 5 insertions(+)
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/service-redesign)
+$ git push --set-upstream origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 360 bytes | 120.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/BaRemy/git-exercises/pull/new/ft/service-redesign
+remote:
+To https://github.com/BaRemy/git-exercises.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/service-redesign)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (main)
+$ ls
+About_Us.html  about.html  contact-us.html  home.html  index.html  services.html
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (main)
+$ vi services.html
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (main)
+$ git add .
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (main)
+$ vi services.html
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (main)
+$ git add .
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (main)
+$ git commit -m "feat: added different service list"
+[main b9a3d3e] feat: added different service list
+ 1 file changed, 5 insertions(+)
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (main)
+$ git add .
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 368 bytes | 368.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/BaRemy/git-exercises.git
+   106393c..b9a3d3e  main -> main
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (main)
+$ git switch fft/service-redesign
+fatal: invalid reference: ft/service-redesign
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (main)
+$ git switch ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/service-redesign)
+$ git diff
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/service-redesign)
+$ git merge main
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/service-redesign|MERGING)
+$ vi services.html
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/service-redesign|MERGING)
+$ git diff
+diff --cc services.html
+index 9f498fe,4d292c0..0000000
+--- a/services.html
++++ b/services.html
+@@@ -8,10 -8,10 +8,15 @@@
+  <body>
+      <h1>This is a Service page</h1>
+      <p>This a short paragraph for my Service page to be submited to The Gym Git Exercises</p>
+ +    <ul>
+ +          <li>Web development</li>
+ +          <li>App development</li>
+ +          <li>UI Design</li>
+ +    </ul>
++     <ol>
++           <li>Architect</li>
++           <li>Maintanance</li>
++           <li>Prototyping</li>
++     </ol>
+  </body>
+  </html>
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/service-redesign|MERGING)
+$ git add .
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/service-redesign|MERGING)
+$ $ git commit -m "updated services|conflicts resolved"
+bash: $: command not found
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/service-redesign|MERGING)
+$ git commit -m "updated services|conflicts resolved"
+[ft/service-redesign 92d3844] updated services|conflicts resolved
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/service-redesign)
+$ git merge main
+Already up to date.
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/service-redesign)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 385 bytes | 385.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/BaRemy/git-exercises.git
+   6b90744..92d3844  ft/service-redesign -> ft/service-redesign
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/service-redesign)
+$
+```
