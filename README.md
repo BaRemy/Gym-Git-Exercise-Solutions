@@ -603,3 +603,22 @@ To https://github.com/BaRemy/git-exercises.git
 USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/service-redesign)
 $
 ```
+## Bundle3
+### Exercise1
+```
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/service-redesign)
+$ git switch -c ft/team-page
+Switched to a new branch 'ft/team-page'
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/team-page)
+$ vi team.html
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/team-page)
+$ git add --all
+warning: in the working copy of 'team.html', LF will be replaced by CRLF the next time Git touches it
+
+USER@DESKTOP-CE1U6VD MINGW64 ~/Desktop/exercise-1 (ft/team-page)
+$
+CONTINUOUS...
+```
